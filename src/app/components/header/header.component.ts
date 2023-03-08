@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  currentDate: Date = new Date();
-
-  constructor() {
-    setInterval( () => this.currentDate = new Date(), 1000 );
-  }
+  
 
 }

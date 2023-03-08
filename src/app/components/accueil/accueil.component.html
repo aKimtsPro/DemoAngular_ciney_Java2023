@@ -1,11 +1,31 @@
 
-<h2>Accueil</h2>
+<div class="content">
+    <h2>Accueil</h2>
 
-<div>
-    <label for="in-color" class="form-label">Quelle est votre couleur préférée?</label>
-    <input type="color" id="in-color" [(ngModel)]="color">
-</div>
+    <div>
+        <label for="in-color" class="form-label">Quelle est votre couleur préférée?</label>
+        <input type="color" id="in-color" [(ngModel)]="color">
+    </div>
 
 
-<div class="colored-square" style.background-color="{{color + 'FF'}}">
+    <div
+        class="colored-square" 
+        style.background-color="{{color + 'FF'}}"
+        (click)="resetColor()"
+    >
+    </div>
+
+    <div>
+        <div>
+            <label for="">entrez votre nom:</label>
+            <input type="text" [(ngModel)]="nom" placeholder="votre nom">
+        </div>
+        <div>
+            <label for="">entrez votre age:</label>
+            <input type="number" [(ngModel)]="age" placeholder="votre age">
+        </div>
+        <div>
+            <p>Bonjour, vous êtes {{ nom }} et vous êtes {{ age && age >= 18 ? 'majeur' : 'mineur' }}</p>
+        </div>
+    </div>
 </div>

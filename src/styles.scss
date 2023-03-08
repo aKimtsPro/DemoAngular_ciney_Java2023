@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    min-height: 100vh;
+    background-color: #d9d6cd;
+}
+
+.content {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #FFFFFA;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
