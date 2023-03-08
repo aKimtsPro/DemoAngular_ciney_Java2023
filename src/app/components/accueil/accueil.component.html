@@ -1,0 +1,11 @@
+
+<h2>Accueil</h2>
+
+<div>
+    <label for="in-color" class="form-label">Quelle est votre couleur préférée?</label>
+    <input type="color" id="in-color" [(ngModel)]="color">
+</div>
+
+
+<div class="colored-square" style.background-color="{{color + 'FF'}}">
+</div>
