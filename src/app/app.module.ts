@@ -7,13 +7,21 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
+import { ChronoComponent } from './components/chrono/chrono.component';
+import { DemoPipeComponent } from './components/demo/demo-pipe/demo-pipe.component';
+import { DemoBindingComponent } from './components/demo/demo-binding/demo-binding.component';
+import { MiMajPipe } from './pipes/mi-maj.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    ChronoComponent,
+    DemoPipeComponent,
+    DemoBindingComponent,
+    MiMajPipe
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accueil',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.scss']
+  selector: 'app-demo-binding',
+  templateUrl: './demo-binding.component.html',
+  styleUrls: ['./demo-binding.component.scss']
 })
-export class AccueilComponent implements OnInit, OnDestroy{
+export class DemoBindingComponent {
 
   color:string = "#0000FF";
   currentDate: Date = new Date();
@@ -40,6 +40,4 @@ export class AccueilComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
       this.stop();
   }
-
-
 }

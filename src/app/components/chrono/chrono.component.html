@@ -1,0 +1,13 @@
+<div>
+
+    <h3>Chronomètre</h3>
+
+    <p> {{ minutes | number:'2.0-0' }}:{{ secondes | number:'2.0-0' }} </p>
+
+    <div>
+        <button (click)="play()">play</button>
+        <button (click)="pause()" >pause</button>
+        <button (click)="stop()">stop</button>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+<div>
+
+    <h3>Binding (1-way, 2-way, events)</h3>
+
+    <div>
+        <label for="in-color" class="form-label">Quelle est votre couleur préférée?</label>
+        <input type="color" id="in-color" [(ngModel)]="color">
+    </div>
+
+
+    <div
+        class="colored-square" 
+        style.background-color="{{color + 'FF'}}"
+        (click)="resetColor()"
+    >
+    </div>
+
+    <div>
+        <div>
+            <label for="">entrez votre nom:</label>
+            <input type="text" [(ngModel)]="nom" placeholder="votre nom">
+        </div>
+        <div>
+            <label for="">entrez votre age:</label>
+            <input type="number" [(ngModel)]="age" placeholder="votre age">
+        </div>
+        <div>
+            <p>Bonjour, vous êtes {{ nom | uppercase }} et vous êtes {{ age && age >= 18 ? 'majeur' : 'mineur' }}</p>
+        </div>
+
+        <select [(ngModel)]="attributeBindingClass">
+            <option>red</option>
+            <option>blue</option>
+        </select>
+
+        <div>
+            <h3 [class]="attributeBindingClass">binding d'attribut</h3>
+        </div>
+        <div>
+
+            <h4>Exo</h4>
+
+            <app-chrono></app-chrono>
+
+        </div>
+    </div>
+</div>

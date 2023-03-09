@@ -1,0 +1,11 @@
+<div>
+
+    <h3>Les pipes</h3>
+
+    <p> Un livre JSONifié: {{ livre | json }} </p>
+    <p> Total du panier: {{ 81 | currency:'EUR':'symbol' }} </p>
+    <p> Nom d'une personne: {{ 'luc' | uppercase | lowercase | titlecase }} </p>
+    <p> Date: {{ currentDate | date:'HH:mm - dd/MM/YYYY' }} </p>
+
+    <p>Pipe custom : {{ 'ma chaine de caractère' | mi_maj:false }}</p>
+</div>
