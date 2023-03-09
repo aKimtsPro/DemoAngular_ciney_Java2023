@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ChronoComponent {
 
-  minutes: number = 0;
   secondes: number = 0;
   chronoInterval?: number;
 
   play(){
     if( !this.chronoInterval )
-      this.chronoInterval = window.setInterval(() => this.ticToc(), 1000)
+      this.chronoInterval = window.setInterval(() => this.secondes++, 1000)
   }
 
   pause(){
@@ -27,20 +26,9 @@ export class ChronoComponent {
     if( this.chronoInterval ){
       clearInterval( this.chronoInterval );
       this.secondes = 0;
-      this.minutes = 0;
       this.chronoInterval = undefined;
     }
     
-  }
-
-  private ticToc(){
-    console.log(this)
-    if( this.secondes < 60) 
-      this.secondes++
-    else{
-      this.secondes = 0;
-      this.minutes++;
-    }
   }
 
 }

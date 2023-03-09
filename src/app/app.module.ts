@@ -11,6 +11,8 @@ import { ChronoComponent } from './components/chrono/chrono.component';
 import { DemoPipeComponent } from './components/demo/demo-pipe/demo-pipe.component';
 import { DemoBindingComponent } from './components/demo/demo-binding/demo-binding.component';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
+import { ConvertSecPipe } from './pipes/convert-sec.pipe';
+import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MiMajPipe } from './pipes/mi-maj.pipe';
     ChronoComponent,
     DemoPipeComponent,
     DemoBindingComponent,
-    MiMajPipe
+    MiMajPipe,
+    ConvertSecPipe,
+    DemoDirectivesComponent
   ],
   imports: [
     BrowserModule,
