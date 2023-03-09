@@ -1,0 +1,26 @@
+<h3> Listes des produits: </h3>
+
+
+<div>
+    <div *ngFor="let prod of products">
+        <dl>
+            <dt>marque</dt>
+            <dd>{{prod.marque}}</dd>
+            
+            <dt>modele</dt>
+            <dd>{{prod.modele}}</dd>
+            
+            <dt>prix</dt>
+            <dd>{{prod.prix}}</dd>
+            
+            <dt>stock</dt>
+
+            <dd *ngIf="prod.stock > 0; else indispo">{{prod.stock}}</dd>
+
+            <ng-template #indispo>
+                <dd>indisponible</dd>
+            </ng-template>
+            
+        </dl>
+    </div>
+</div>

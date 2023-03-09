@@ -20,6 +20,26 @@
         <label for="demo-ng-class">sélectionnez pour activer la classe "nomClasse"</label>
     </div>
 
+    <h3>Directives structures</h3>
+
+    <div>
+        <h4>*ngIf</h4>
+
+        <p *ngIf="!isBordered">
+            Permet de conditionner l'existant d'une 
+            balise et son contenu dans la structure html
+        </p>
+
+        <h4>*ngFor</h4>
+
+        <div>
+            <p *ngFor="let item of personnes"> 
+                M. {{ item.nom }} a {{item.age}} ans 
+            </p>
+        </div>
+        
+
+    </div>
     
 
 </div>

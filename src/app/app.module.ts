@@ -12,7 +12,9 @@ import { DemoPipeComponent } from './components/demo/demo-pipe/demo-pipe.compone
 import { DemoBindingComponent } from './components/demo/demo-binding/demo-binding.component';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { ConvertSecPipe } from './pipes/convert-sec.pipe';
-import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
+import { DemoDirectivesComponent } from './components/demo/demo-directives/demo-directives.component';
+import { ExoDirectiveComponent } from './components/exo/exo-directive/exo-directive.component';
+import { ExoDirectiveStructComponent } from './components/exo/exo-directive-struct/exo-directive-struct.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DemoDirectivesComponent } from './components/demo-directives/demo-direc
     DemoBindingComponent,
     MiMajPipe,
     ConvertSecPipe,
-    DemoDirectivesComponent
+    DemoDirectivesComponent,
+    ExoDirectiveComponent,
+    ExoDirectiveStructComponent
   ],
   imports: [
     BrowserModule,
