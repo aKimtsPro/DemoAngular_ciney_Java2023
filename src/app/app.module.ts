@@ -7,34 +7,22 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
-import { ChronoComponent } from './components/chrono/chrono.component';
-import { DemoPipeComponent } from './components/demo/demo-pipe/demo-pipe.component';
-import { DemoBindingComponent } from './components/demo/demo-binding/demo-binding.component';
-import { MiMajPipe } from './pipes/mi-maj.pipe';
-import { ConvertSecPipe } from './pipes/convert-sec.pipe';
-import { DemoDirectivesComponent } from './components/demo/demo-directives/demo-directives.component';
-import { ExoDirectiveComponent } from './components/exo/exo-directive/exo-directive.component';
-import { ExoDirectiveStructComponent } from './components/exo/exo-directive-struct/exo-directive-struct.component';
+import { ExoModule } from './exo/exo.module';
+import { DemoModule } from './demo/demo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccueilComponent,
-    ChronoComponent,
-    DemoPipeComponent,
-    DemoBindingComponent,
-    MiMajPipe,
-    ConvertSecPipe,
-    DemoDirectivesComponent,
-    ExoDirectiveComponent,
-    ExoDirectiveStructComponent
+    AccueilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ExoModule,
+    DemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

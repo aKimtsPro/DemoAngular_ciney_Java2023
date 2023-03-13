@@ -2,11 +2,11 @@
 
 <div>
 
-    <h3>Les direction de composants</h3>
+    <h3 highlight>Les direction de composants</h3>
 
     <div [ngStyle]="{ 'color' : color, 'font-size': fontSize+'px' }">
 
-        <select [(ngModel)]="fontSize">
+        <select [(ngModel)]="fontSize" highlight>
             <option>12</option>
             <option>14</option>
             <option>20</option>
@@ -23,7 +23,7 @@
     <h3>Directives structures</h3>
 
     <div>
-        <h4>*ngIf</h4>
+        <h4 highlight>*ngIf</h4>
 
         <p *ngIf="!isBordered">
             Permet de conditionner l'existant d'une 
@@ -37,9 +37,9 @@
                 M. {{ item.nom }} a {{item.age}} ans 
             </p>
         </div>
-        
-
     </div>
+
+    <h3>Directives d'attributs <span highlight rdmColor>(custom)</span> </h3>
     
 
 </div>
