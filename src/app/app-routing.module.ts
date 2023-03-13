@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'exo/chrono', component: ChronoComponent },
   { path: 'exo/directive', component: ExoDirectiveComponent },
   { path: 'exo/dir-struct', component: ExoDirectiveStructComponent },
-  { path: 'standalone', loadChildren: () => import('./standalone/test-routes').then( (r) => r.TEST_ROUTES)}
 ];
 
 @NgModule({
