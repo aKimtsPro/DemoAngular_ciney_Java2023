@@ -7,6 +7,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { ConvertSecPipe } from '../exo/pipes/convert-sec.pipe';
 import { FormsModule } from '@angular/forms';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
+import { DemoRoutingModule } from './demo-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MiMajPipe } from './pipes/mi-maj.pipe';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    DemoRoutingModule
   ],
   exports: [
     DemoBindingComponent,
