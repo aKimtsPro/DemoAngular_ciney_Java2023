@@ -9,6 +9,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
 import { ExoModule } from './exo/exo.module';
 import { DemoModule } from './demo/demo.module';
+import { DirectDirective } from './standalone/directives/direct.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DemoModule } from './demo/demo.module';
     AppRoutingModule,
     FormsModule,
     ExoModule,
-    DemoModule
+    DemoModule,
+    DirectDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
