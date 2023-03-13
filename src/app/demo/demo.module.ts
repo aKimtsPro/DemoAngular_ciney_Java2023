@@ -4,8 +4,9 @@ import { DemoBindingComponent } from './components/demo-binding/demo-binding.com
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { ConvertSecPipe } from './pipes/convert-sec.pipe';
+import { ConvertSecPipe } from '../exo/pipes/convert-sec.pipe';
 import { FormsModule } from '@angular/forms';
+import { MiMajPipe } from './pipes/mi-maj.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { FormsModule } from '@angular/forms';
     DemoDirectivesComponent,
     DemoPipeComponent,
     HighlightDirective,
-    ConvertSecPipe
+    MiMajPipe
   ],
   imports: [
     CommonModule,
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     DemoDirectivesComponent,
     DemoPipeComponent,
     HighlightDirective,
-    ConvertSecPipe
+    MiMajPipe
   ]
 })
 export class DemoModule { }

@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ExoDirectiveComponent } from './components/exo-directive/exo-directive.component';
 import { ExoDirectiveStructComponent } from './components/exo-directive-struct/exo-directive-struct.component';
 import { ExoRdmColorDirective } from './directives/exo-rdm-color.directive';
-import { MiMajPipe } from './pipes/mi-maj.pipe';
+import { MiMajPipe } from '../demo/pipes/mi-maj.pipe';
 import { ChronoComponent } from './components/chrono/chrono.component';
 import { DemoModule } from '../demo/demo.module';
+import { ConvertSecPipe } from './pipes/convert-sec.pipe';
 
 
 
@@ -14,18 +15,17 @@ import { DemoModule } from '../demo/demo.module';
     ExoDirectiveComponent,
     ExoDirectiveStructComponent,
     ExoRdmColorDirective,
-    MiMajPipe,
+    ConvertSecPipe,
     ChronoComponent
   ],
   imports: [
-    CommonModule,
-    DemoModule
+    CommonModule
   ],
   exports: [
     ExoDirectiveComponent,
     ExoDirectiveStructComponent,
     ExoRdmColorDirective,
-    MiMajPipe,
+    ConvertSecPipe,
     ChronoComponent
   ]
 })
