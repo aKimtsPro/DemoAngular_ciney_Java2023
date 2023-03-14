@@ -1,9 +1,7 @@
-import { inject, NgModule } from '@angular/core';
-import { ActivatedRoute, RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { Page404Component } from './components/page404/page404.component';
-
-
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full'}, // localhost:4200

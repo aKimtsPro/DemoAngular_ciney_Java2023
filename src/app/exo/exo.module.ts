@@ -11,8 +11,6 @@ import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.compon
 import { RoutingComponent } from './components/routing/routing.component';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     ExoDirectiveComponent,

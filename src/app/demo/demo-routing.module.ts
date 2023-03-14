@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { inject, NgModule } from "@angular/core";
+import { ActivatedRoute, ActivatedRouteSnapshot, CanActivateFn, RouterModule, RouterStateSnapshot, Routes, CanMatchFn, Route } from "@angular/router";
 import { DemoAccueilComponent } from "./components/demo-accueil/demo-accueil.component";
 import { DemoBindingComponent } from "./components/demo-binding/demo-binding.component";
 import { DemoDirectivesComponent } from "./components/demo-directives/demo-directives.component";
@@ -8,6 +8,38 @@ import { DemoComponent } from "./components/demo/demo.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { RouteParamComponent } from "./components/route-param/route-param.component";
 
+function numberParamGuard(...paramNames: string[]): CanMatchFn {
+    return (route, segments) => {
+        const params = findParams(route)
+        
+        for(const [k, v] of params ){
+            console.log(k,segments[v].path)
+            if( paramNames.includes(k) && isNaN( parseInt(segments[v].path)) )
+                return false; 
+        }
+
+        console.log('test');    
+
+        return true;
+    }
+}
+
+
+function findParams(route: Route): Map<string, number>{
+    const params= new Map<string, number>();
+    
+    if(route.path === undefined)
+        return params;
+
+    const segments = route.path.split('/');
+
+    for (const segment of segments) {
+        if(segment.startsWith(':'))
+            params.set(segment.substring(1), segments.indexOf(segment));
+    }
+
+    return params;
+}
 
 const routes: Routes = [
 
@@ -17,7 +49,7 @@ const routes: Routes = [
         { path: 'binding', component: DemoBindingComponent },
         { path: 'pipe', component: DemoPipeComponent },
         { path: 'directive', component: DemoDirectivesComponent },
-        { path: 'route-param/:param', component: RouteParamComponent },
+        { path: 'route-param/:param', component: RouteParamComponent, canMatch: [numberParamGuard('param')] },
         { path: 'comm', component: ParentComponent },
     ]}
 
