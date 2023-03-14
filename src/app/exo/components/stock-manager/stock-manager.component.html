@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <app-inventaire [stock]="enStock" (to-shop)="onToShop($event)"></app-inventaire>
+        </div>
+        <div class="col-6">
+            <app-en-vente [enVente]="enVente" (to-stock)="onToStock($event)"></app-en-vente>
+        </div>
+    </div>
+</div>

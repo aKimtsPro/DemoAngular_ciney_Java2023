@@ -1,0 +1,5 @@
+<app-enfant 
+    *ngFor="let name of names" 
+    [name]="name"
+    (delete)="onDelete($event)"
+></app-enfant>

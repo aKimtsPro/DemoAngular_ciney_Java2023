@@ -5,8 +5,14 @@ import { ExoDirectiveStructComponent } from './components/exo-directive-struct/e
 import { ExoRdmColorDirective } from './directives/exo-rdm-color.directive';
 import { ChronoComponent } from './components/chrono/chrono.component';
 import { ConvertSecPipe } from './pipes/convert-sec.pipe';
-
-
+import { ExoRoutingModule } from './exo-routing.module';
+import { ExoComponent } from './components/exo/exo.component';
+import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.component';
+import { RoutingComponent } from './components/routing/routing.component';
+import { FormsModule } from '@angular/forms';
+import { StockManagerComponent } from './components/stock-manager/stock-manager.component';
+import { InventaireComponent } from './components/stock-manager/inventaire/inventaire.component';
+import { EnVenteComponent } from './components/stock-manager/en-vente/en-vente.component';
 
 @NgModule({
   declarations: [
@@ -14,17 +20,18 @@ import { ConvertSecPipe } from './pipes/convert-sec.pipe';
     ExoDirectiveStructComponent,
     ExoRdmColorDirective,
     ConvertSecPipe,
-    ChronoComponent
+    ChronoComponent,
+    ExoComponent,
+    ExoAccueilComponent,
+    RoutingComponent,
+    StockManagerComponent,
+    InventaireComponent,
+    EnVenteComponent
   ],
   imports: [
-    CommonModule
-  ],
-  exports: [
-    ExoDirectiveComponent,
-    ExoDirectiveStructComponent,
-    ExoRdmColorDirective,
-    ConvertSecPipe,
-    ChronoComponent
+    CommonModule,
+    FormsModule,
+    ExoRoutingModule
   ]
 })
 export class ExoModule { }
