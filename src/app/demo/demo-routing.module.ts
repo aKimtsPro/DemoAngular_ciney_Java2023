@@ -5,6 +5,7 @@ import { DemoBindingComponent } from "./components/demo-binding/demo-binding.com
 import { DemoDirectivesComponent } from "./components/demo-directives/demo-directives.component";
 import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { DemoComponent } from "./components/demo/demo.component";
+import { ParentComponent } from "./components/parent/parent.component";
 import { RouteParamComponent } from "./components/route-param/route-param.component";
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
         { path: 'binding', component: DemoBindingComponent },
         { path: 'pipe', component: DemoPipeComponent },
         { path: 'directive', component: DemoDirectivesComponent },
-        { path: 'route-param/:param', component: RouteParamComponent }
+        { path: 'route-param/:param', component: RouteParamComponent },
+        { path: 'comm', component: ParentComponent },
     ]}
 
 ]

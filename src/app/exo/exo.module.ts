@@ -8,6 +8,8 @@ import { ConvertSecPipe } from './pipes/convert-sec.pipe';
 import { ExoRoutingModule } from './exo-routing.module';
 import { ExoComponent } from './components/exo/exo.component';
 import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.component';
+import { RoutingComponent } from './components/routing/routing.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,18 +21,13 @@ import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.compon
     ConvertSecPipe,
     ChronoComponent,
     ExoComponent,
-    ExoAccueilComponent
+    ExoAccueilComponent,
+    RoutingComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ExoRoutingModule
-  ],
-  exports: [
-    ExoDirectiveComponent,
-    ExoDirectiveStructComponent,
-    ExoRdmColorDirective,
-    ConvertSecPipe,
-    ChronoComponent
   ]
 })
 export class ExoModule { }

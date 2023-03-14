@@ -4,13 +4,14 @@ import { DemoBindingComponent } from './components/demo-binding/demo-binding.com
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { ConvertSecPipe } from '../exo/pipes/convert-sec.pipe';
 import { FormsModule } from '@angular/forms';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './components/demo/demo.component';
 import { DemoAccueilComponent } from './components/demo-accueil/demo-accueil.component';
 import { RouteParamComponent } from './components/route-param/route-param.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { EnfantComponent } from './components/parent/enfant/enfant.component';
 
 @NgModule({
   declarations: [
@@ -21,19 +22,14 @@ import { RouteParamComponent } from './components/route-param/route-param.compon
     MiMajPipe,
     DemoComponent,
     DemoAccueilComponent,
-    RouteParamComponent
+    RouteParamComponent,
+    ParentComponent,
+    EnfantComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     DemoRoutingModule
-  ],
-  exports: [
-    DemoBindingComponent,
-    DemoDirectivesComponent,
-    DemoPipeComponent,
-    HighlightDirective,
-    MiMajPipe
   ]
 })
 export class DemoModule { }
