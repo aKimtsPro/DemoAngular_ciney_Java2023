@@ -5,6 +5,7 @@ import { ExoDirectiveStructComponent } from './components/exo-directive-struct/e
 import { ExoRdmColorDirective } from './directives/exo-rdm-color.directive';
 import { ChronoComponent } from './components/chrono/chrono.component';
 import { ConvertSecPipe } from './pipes/convert-sec.pipe';
+import { ExoRoutingModule } from './exo-routing.module';
 
 
 
@@ -17,7 +18,8 @@ import { ConvertSecPipe } from './pipes/convert-sec.pipe';
     ChronoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ExoRoutingModule
   ],
   exports: [
     ExoDirectiveComponent,
