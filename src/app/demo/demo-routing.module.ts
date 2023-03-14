@@ -19,26 +19,32 @@ function minMaxGuard(paramName: string, min?: number, max?: number): CanActivate
     }
 }
 
-// const childGuard: CanActivateChildFn = (childRoute, state) => {
-//     childRoute.params
-// }
+const childGuard: CanActivateChildFn = (childRoute, state) => {
+    return childRoute.url[0].path !== 'no-activation'
+}
 
 const routes: Routes = [
 
-    { path: '', component: DemoComponent, children: [
-        { path: '', redirectTo: 'accueil', pathMatch: 'full' },
-        { path: 'accueil', component: DemoAccueilComponent },
-        { path: 'binding', component: DemoBindingComponent },
-        { path: 'pipe', component: DemoPipeComponent },
-        { path: 'directive', component: DemoDirectivesComponent },
-        { 
-            path: 'route-param/:param', 
-            component: RouteParamComponent, 
-            canActivate:[minMaxGuard('param',0,2)], 
-            canMatch: [numberParamGuard('param')] 
-        },
-        { path: 'comm', component: ParentComponent },
-    ]}
+    { 
+        path: '', 
+        component: DemoComponent,
+        canActivateChild: [childGuard],
+        children: [
+            { path: '', redirectTo: 'accueil', pathMatch: 'full' },
+            { path: 'accueil', component: DemoAccueilComponent },
+            { path: 'binding', component: DemoBindingComponent },
+            { path: 'pipe', component: DemoPipeComponent },
+            { path: 'directive', component: DemoDirectivesComponent },
+            { 
+                path: 'route-param/:param', 
+                component: RouteParamComponent, 
+                canActivate:[minMaxGuard('param',0,2)], 
+                canMatch: [numberParamGuard('param')] 
+            },
+            { path: 'comm', component: ParentComponent },
+            { path: 'no-activate', component: DemoAccueilComponent },
+        ]
+    }
 
 ]
 
