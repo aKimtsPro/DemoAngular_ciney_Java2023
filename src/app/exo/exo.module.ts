@@ -6,6 +6,8 @@ import { ExoRdmColorDirective } from './directives/exo-rdm-color.directive';
 import { ChronoComponent } from './components/chrono/chrono.component';
 import { ConvertSecPipe } from './pipes/convert-sec.pipe';
 import { ExoRoutingModule } from './exo-routing.module';
+import { ExoComponent } from './components/exo/exo.component';
+import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.component';
 
 
 
@@ -15,7 +17,9 @@ import { ExoRoutingModule } from './exo-routing.module';
     ExoDirectiveStructComponent,
     ExoRdmColorDirective,
     ConvertSecPipe,
-    ChronoComponent
+    ChronoComponent,
+    ExoComponent,
+    ExoAccueilComponent
   ],
   imports: [
     CommonModule,

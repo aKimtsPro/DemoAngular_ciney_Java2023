@@ -9,13 +9,15 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { FormsModule } from '@angular/forms';
 import { ExoModule } from './exo/exo.module';
 import { DemoModule } from './demo/demo.module';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './components/demo/demo.component';
+import { DemoAccueilComponent } from './components/demo-accueil/demo-accueil.component';
+import { RouteParamComponent } from './components/route-param/route-param.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DemoComponent } from './components/demo/demo.component';
     DemoPipeComponent,
     HighlightDirective,
     MiMajPipe,
-    DemoComponent
+    DemoComponent,
+    DemoAccueilComponent,
+    RouteParamComponent
   ],
   imports: [
     CommonModule,
