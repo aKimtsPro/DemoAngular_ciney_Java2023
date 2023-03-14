@@ -10,6 +10,9 @@ import { ExoComponent } from './components/exo/exo.component';
 import { ExoAccueilComponent } from './components/exo-accueil/exo-accueil.component';
 import { RoutingComponent } from './components/routing/routing.component';
 import { FormsModule } from '@angular/forms';
+import { StockManagerComponent } from './components/stock-manager/stock-manager.component';
+import { InventaireComponent } from './components/stock-manager/inventaire/inventaire.component';
+import { EnVenteComponent } from './components/stock-manager/en-vente/en-vente.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FormsModule } from '@angular/forms';
     ChronoComponent,
     ExoComponent,
     ExoAccueilComponent,
-    RoutingComponent
+    RoutingComponent,
+    StockManagerComponent,
+    InventaireComponent,
+    EnVenteComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,9 @@
+
+<h4>Stock</h4>
+
+<ul>
+    <li *ngFor="let prod of stock">
+        <span>{{prod}}</span>
+        <button (click)="onClick(prod)">-></button>
+    </li>
+</ul>

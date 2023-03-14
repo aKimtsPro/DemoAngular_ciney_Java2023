@@ -1,0 +1,8 @@
+<h4>En vente:</h4>
+
+<ul>
+    <li *ngFor="let prod of enVente">
+        <span>{{prod}}</span>
+        <button (click)="onClick(prod)">-></button>
+    </li>
+</ul>
