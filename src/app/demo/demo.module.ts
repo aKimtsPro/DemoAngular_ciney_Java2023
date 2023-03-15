@@ -12,6 +12,8 @@ import { DemoAccueilComponent } from './components/demo-accueil/demo-accueil.com
 import { RouteParamComponent } from './components/route-param/route-param.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { EnfantComponent } from './components/parent/enfant/enfant.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginService } from '../services/login.service';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,16 @@ import { EnfantComponent } from './components/parent/enfant/enfant.component';
     DemoAccueilComponent,
     RouteParamComponent,
     ParentComponent,
-    EnfantComponent
+    EnfantComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     DemoRoutingModule
-  ]
+  ],
+	providers: [
+		LoginService
+	]
 })
 export class DemoModule { }

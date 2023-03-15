@@ -6,6 +6,7 @@ import { DemoBindingComponent } from "./components/demo-binding/demo-binding.com
 import { DemoDirectivesComponent } from "./components/demo-directives/demo-directives.component";
 import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { DemoComponent } from "./components/demo/demo.component";
+import { LoginComponent } from "./components/login/login.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { RouteParamComponent } from "./components/route-param/route-param.component";
 
@@ -13,8 +14,8 @@ function minMaxGuard(paramName: string, min?: number, max?: number): CanActivate
     return (route,state) => {
         const param = parseInt(route.params[paramName]);
 
-        return !isNaN(param) && 
-            (!min || param >= min) && 
+        return !isNaN(param) &&
+            (!min || param >= min) &&
             (!max || param <= max);
     }
 }
@@ -25,8 +26,8 @@ const childGuard: CanActivateChildFn = (childRoute, state) => {
 
 const routes: Routes = [
 
-    { 
-        path: '', 
+    {
+        path: '',
         component: DemoComponent,
         canActivateChild: [childGuard],
         children: [
@@ -35,14 +36,15 @@ const routes: Routes = [
             { path: 'binding', component: DemoBindingComponent },
             { path: 'pipe', component: DemoPipeComponent },
             { path: 'directive', component: DemoDirectivesComponent },
-            { 
-                path: 'route-param/:param', 
-                component: RouteParamComponent, 
-                canActivate:[minMaxGuard('param',0,2)], 
-                canMatch: [numberParamGuard('param')] 
+            {
+                path: 'route-param/:param',
+                component: RouteParamComponent,
+                canActivate:[minMaxGuard('param',0,2)],
+                canMatch: [numberParamGuard('param')]
             },
             { path: 'comm', component: ParentComponent },
             { path: 'no-activate', component: DemoAccueilComponent },
+            { path: 'login', component: LoginComponent },
         ]
     }
 
