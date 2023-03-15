@@ -1,0 +1,18 @@
+<section *ngIf="!connectedUser">
+	<div>
+		<label for="login">Login:</label>
+		<input type="text" id="login" [(ngModel)]="data.login">
+	</div>
+	<div>
+		<label for="password">Password:</label>
+		<input type="password" id="password" [(ngModel)]="data.password">
+	</div>
+	<div>
+		<button (click)="connection()">Se connecter</button>
+	</div>
+</section>
+
+<section *ngIf="connectedUser">
+	<p>Bienvenue {{ connectedUser.firstName }} {{ connectedUser.lastName }}</p>
+	<button (click)="disconnect()">Se déconnecter</button>
+</section>

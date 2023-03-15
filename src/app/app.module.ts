@@ -15,7 +15,7 @@ import { Page404Component } from './components/page404/page404.component';
     HeaderComponent,
     FooterComponent,
     AccueilComponent,
-    Page404Component
+    Page404Component,
   ],
   imports: [
     BrowserModule,

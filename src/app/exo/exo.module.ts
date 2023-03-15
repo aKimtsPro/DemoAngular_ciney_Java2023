@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { StockManagerComponent } from './components/stock-manager/stock-manager.component';
 import { InventaireComponent } from './components/stock-manager/inventaire/inventaire.component';
 import { EnVenteComponent } from './components/stock-manager/en-vente/en-vente.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { CreateNameComponent } from './components/parent/create-name/create-name.component';
+import { ListNameComponent } from './components/parent/list-name/list-name.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { EnVenteComponent } from './components/stock-manager/en-vente/en-vente.c
     RoutingComponent,
     StockManagerComponent,
     InventaireComponent,
-    EnVenteComponent
+    EnVenteComponent,
+    ParentComponent,
+    CreateNameComponent,
+    ListNameComponent
   ],
   imports: [
     CommonModule,

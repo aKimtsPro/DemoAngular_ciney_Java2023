@@ -6,6 +6,7 @@ import { ExoAccueilComponent } from "./components/exo-accueil/exo-accueil.compon
 import { ExoDirectiveStructComponent } from "./components/exo-directive-struct/exo-directive-struct.component";
 import { ExoDirectiveComponent } from "./components/exo-directive/exo-directive.component";
 import { ExoComponent } from "./components/exo/exo.component";
+import { ParentComponent } from "./components/parent/parent.component";
 import { RoutingComponent } from "./components/routing/routing.component";
 import { StockManagerComponent } from "./components/stock-manager/stock-manager.component";
 
@@ -18,7 +19,8 @@ const routes: Routes = [
         { path: 'directive', component: ExoDirectiveComponent },
         { path: 'dir-struct', component: ExoDirectiveStructComponent },
         { path: 'routing/:nbr', component: RoutingComponent, canMatch:[numberParamGuard('nbr')] },
-        { path: 'comm', component: StockManagerComponent }
+        { path: 'comm', component: StockManagerComponent },
+				{ path: 'parent', component: ParentComponent }
     ]}
 ]
 
