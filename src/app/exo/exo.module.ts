@@ -16,6 +16,7 @@ import { EnVenteComponent } from './components/stock-manager/en-vente/en-vente.c
 import { ParentComponent } from './components/parent/parent.component';
 import { CreateNameComponent } from './components/parent/create-name/create-name.component';
 import { ListNameComponent } from './components/parent/list-name/list-name.component';
+import { NamesService } from './services/names.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,9 @@ import { ListNameComponent } from './components/parent/list-name/list-name.compo
     CommonModule,
     FormsModule,
     ExoRoutingModule
-  ]
+  ],
+	providers: [
+		NamesService
+	]
 })
 export class ExoModule { }
