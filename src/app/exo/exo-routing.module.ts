@@ -6,8 +6,10 @@ import { ExoAccueilComponent } from "./components/exo-accueil/exo-accueil.compon
 import { ExoDirectiveStructComponent } from "./components/exo-directive-struct/exo-directive-struct.component";
 import { ExoDirectiveComponent } from "./components/exo-directive/exo-directive.component";
 import { ExoComponent } from "./components/exo/exo.component";
+import { FavPizzaComponent } from "./components/fav-pizza/fav-pizza.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { RoutingComponent } from "./components/routing/routing.component";
+import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
 import { StockManagerComponent } from "./components/stock-manager/stock-manager.component";
 
 
@@ -20,7 +22,9 @@ const routes: Routes = [
         { path: 'dir-struct', component: ExoDirectiveStructComponent },
         { path: 'routing/:nbr', component: RoutingComponent, canMatch:[numberParamGuard('nbr')] },
         { path: 'comm', component: StockManagerComponent },
-				{ path: 'parent', component: ParentComponent }
+        { path: 'parent', component: ParentComponent },
+        { path: 'fav-pizza', component: FavPizzaComponent },
+        { path: 'cart', component: ShoppingCartComponent },
     ]}
 ]
 

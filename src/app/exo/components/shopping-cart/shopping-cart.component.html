@@ -1,0 +1,38 @@
+<h3>Exo shopping cart</h3>
+
+<div>
+    <h4>Form ajout</h4>
+    <div class="mb-3">
+        <label for="in-name" class="form-label">name</label>
+        <input type="text" class="form-control" id="in-name" [(ngModel)]="toAdd.name">
+    </div>
+    <div class="mb-3">
+        <label for="in-price" class="form-label">price</label>
+        <input type="number" class="form-control" id="in-price" [(ngModel)]="toAdd.price">
+    </div>
+    <div class="mb-3">
+        <label for="in-qtt" class="form-label">qtt</label>
+        <input type="number" class="form-control" id="in-qtt" [(ngModel)]="toAdd.qtt">
+    </div>
+    <div class="mb-3">
+        <input type="checkbox" class="form-check-input" id="in-promo" [(ngModel)]="toAdd.promo">
+        <label for="in-promo" class="form-label">promo</label>
+    </div>
+    <button class="btn btn-primary" (click)="addToCart()">ajouter au panier</button>
+</div>
+
+
+<div>
+
+    <h4>Shopping cart</h4>
+
+    <div>
+        <p *ngFor="let item of cart">
+            {{item.name}} - {{item.qtt}} - {{item.price}} - {{item.qtt*item.price}} 
+            <button (click)="incQtt(item.id)">+</button>
+            <button (click)="decQtt(item.id)">-</button>
+            <button (click)="removeFromCart(item.id)">x</button> 
+        </p>
+    </div>
+
+</div>

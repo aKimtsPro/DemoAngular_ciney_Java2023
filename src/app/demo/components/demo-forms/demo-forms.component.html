@@ -1,0 +1,34 @@
+
+<h3>Les formulaire reactifs</h3>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+        <label for="in-name" class="form-label">name</label>
+        <input type="text" id="in-name" class="form-control" formControlName="contactName">
+    </div>
+
+    <div class="mb-3">
+        <label for="in-email" class="form-label">email</label>
+        <input type="text" id="in-email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+        <label for="in-trust" class="form-label">trust index (1-10)</label>
+        <input type="text" id="in-trust" class="form-control" formControlName="trustIndex">
+    </div>
+
+    <div class="mb-3">
+        <input type="text" id="in-fav" class="form-check-input" formControlName="favorite">
+        <label for="in-fav" class="form-label">favorite</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">submit</button>
+
+</form>
+
+<div>
+
+    <h4>contact</h4>
+
+</div>

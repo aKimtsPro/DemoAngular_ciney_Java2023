@@ -4,6 +4,7 @@ import { numberParamGuard } from "../guards/common-guards.guard";
 import { DemoAccueilComponent } from "./components/demo-accueil/demo-accueil.component";
 import { DemoBindingComponent } from "./components/demo-binding/demo-binding.component";
 import { DemoDirectivesComponent } from "./components/demo-directives/demo-directives.component";
+import { DemoFormsComponent } from "./components/demo-forms/demo-forms.component";
 import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { DemoComponent } from "./components/demo/demo.component";
 import { LoginComponent } from "./components/login/login.component";
@@ -45,6 +46,7 @@ const routes: Routes = [
             { path: 'comm', component: ParentComponent },
             { path: 'no-activate', component: DemoAccueilComponent },
             { path: 'login', component: LoginComponent },
+            { path: 'forms', component: DemoFormsComponent },
         ]
     }
 

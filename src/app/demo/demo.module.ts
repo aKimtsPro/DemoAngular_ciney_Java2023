@@ -4,7 +4,7 @@ import { DemoBindingComponent } from './components/demo-binding/demo-binding.com
 import { DemoDirectivesComponent } from './components/demo-directives/demo-directives.component';
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './components/demo/demo.component';
@@ -14,6 +14,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { EnfantComponent } from './components/parent/enfant/enfant.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginService } from '../services/login.service';
+import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,13 @@ import { LoginService } from '../services/login.service';
     ParentComponent,
     EnfantComponent,
     LoginComponent,
+    DemoFormsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    ReactiveFormsModule
   ],
 	providers: [
 		LoginService

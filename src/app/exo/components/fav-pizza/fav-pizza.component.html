@@ -1,0 +1,9 @@
+<h3>Mes pizzas favorites</h3>
+
+<div>
+    <input type="text" [(ngModel)]="newPizzaName"><button (click)="addPizza()">ajouter</button>
+</div>
+
+<div>
+    <p *ngFor="let pizza of favPizza">|| {{pizza.id}} || {{pizza.nom}} || <button (click)="removePizza(pizza.id)">X</button></p>
+</div>

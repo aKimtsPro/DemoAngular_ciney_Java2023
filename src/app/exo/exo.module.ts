@@ -17,6 +17,8 @@ import { ParentComponent } from './components/parent/parent.component';
 import { CreateNameComponent } from './components/parent/create-name/create-name.component';
 import { ListNameComponent } from './components/parent/list-name/list-name.component';
 import { NamesService } from './services/names.service';
+import { FavPizzaComponent } from './components/fav-pizza/fav-pizza.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { NamesService } from './services/names.service';
     EnVenteComponent,
     ParentComponent,
     CreateNameComponent,
-    ListNameComponent
+    ListNameComponent,
+    FavPizzaComponent,
+    ShoppingCartComponent
   ],
   imports: [
     CommonModule,
