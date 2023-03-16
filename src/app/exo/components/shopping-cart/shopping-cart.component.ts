@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CartItem } from 'src/app/models/cart-item.model';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 
@@ -9,32 +10,40 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  toAdd: CartItem = {
-    id: -1,
-    name: '',
-    price: 0,
-    qtt: 1,
-    promo: false
-  }
 
+  form: FormGroup;
   cart: CartItem[] = [];
 
-  constructor(private readonly _service: ShoppingCartService){}
+
+  constructor(private readonly _service: ShoppingCartService, builder: FormBuilder){
+    // this.form = new FormGroup({
+    //   name: new FormControl('', {}),
+    //   price: new FormControl(),
+    //   qtt: new FormControl(),
+    //   promo: new FormControl()
+    // })
+    this.form = builder.group({
+      name: [,[Validators.required, Validators.minLength(5), Validators.maxLength(20), Validators.pattern('[a-z]+')]],
+      price: [,[Validators.required, Validators.min(0)]],
+      qtt: [1, [Validators.required, Validators.min(0)]],
+      promo: [false]
+    })
+  }
 
   ngOnInit(): void {
     this.loadCart();
   }
 
   addToCart(){
-    this._service.add(this.toAdd);
-    this.toAdd = {
-      id: -1,
-      name: '',
-      price: 0,
-      qtt: 1,
-      promo: false
+    if( this.form.valid ){
+      const toAdd: CartItem = {
+        id: -1,
+        ...this.form.value
+      }
+      this._service.add(toAdd);
+      this.form.reset({ qtt: 1, promo: false })
+      this.loadCart();
     }
-    this.loadCart();
   }
 
   loadCart(){
