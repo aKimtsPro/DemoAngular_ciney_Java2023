@@ -9,6 +9,8 @@ import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { DemoComponent } from "./components/demo/demo.component";
 import { LoginComponent } from "./components/login/login.component";
 import { ParentComponent } from "./components/parent/parent.component";
+import { PostDetailsComponent } from "./components/post-details/post-details.component";
+import { PostsComponent } from "./components/posts/posts.component";
 import { RouteParamComponent } from "./components/route-param/route-param.component";
 
 function minMaxGuard(paramName: string, min?: number, max?: number): CanActivateFn {
@@ -47,6 +49,11 @@ const routes: Routes = [
             { path: 'no-activate', component: DemoAccueilComponent },
             { path: 'login', component: LoginComponent },
             { path: 'forms', component: DemoFormsComponent },
+						{ path: 'httpClient', component: PostsComponent ,
+								children: [
+									{ path: 'details/:id', component: PostDetailsComponent}
+								]
+						}
         ]
     }
 

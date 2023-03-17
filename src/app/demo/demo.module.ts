@@ -15,6 +15,10 @@ import { EnfantComponent } from './components/parent/enfant/enfant.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginService } from '../services/login.service';
 import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
+import { HttpClientModule } from "@angular/common/http";
+import { PostsComponent } from './components/posts/posts.component';
+import { PostService } from '../services/post.service';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +34,19 @@ import { DemoFormsComponent } from './components/demo-forms/demo-forms.component
     EnfantComponent,
     LoginComponent,
     DemoFormsComponent,
+    PostsComponent,
+    PostDetailsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     DemoRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+		HttpClientModule
   ],
 	providers: [
-		LoginService
+		LoginService,
+		PostService
 	]
 })
 export class DemoModule { }
